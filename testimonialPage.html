@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Testimonial Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100svw;
+            height: 100svh;
+            background-color: #fafaf9;
+            padding: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Sora", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        .testimonial {
+            width: 100%;
+            height: max-content;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .testimonial .container {
+            width: 100%;
+            /* height: max-content; */
+        }
+
+        .review_content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .review_content .star_icon_container {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #F5C044;
+            display: grid;
+            place-content: center;
+            position: relative;
+        }
+
+        .review_content .star_icon_container::before {
+            content: "⭐️";
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-content: center;
+            font-size: 20px;
+            background-image: linear-gradient(to bottom, #ffffff 0%, #fff200 50%, #da6f40 80%, #c25b00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .main_title{
+            font-size: 2.25rem;
+            color: #18181B;
+        }
+        .about_reviewers{
+            font-size: 1.25rem;
+            color: #52525A;
+            line-height: 30px;
+        }
+
+        .checklist_container{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .checklist_container .checklist{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+
+        .checklist_container .checklist p{
+            font-size: 0.875rem;
+        }
+
+        .reviewers{
+            display: inline-block;
+            gap: 30px;
+        }
+
+        .reviewers .reviews:nth-child(odd){
+            margin-bottom: 20px;
+            float: right;
+        }
+        .reviewers .reviews:nth-child(even){
+            margin-top: 20px;
+            float: left;
+        }
+
+        .reviewers .reviews{
+            width: calc(100% + 50px);
+            padding: 40px;
+            background-color: #FFF;
+            box-shadow: 0 0 10px rgb(134 134 134 / 10%);
+            max-width: 360px;
+            max-height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 10px;
+            border-radius: 10px;
+        }
+
+        .reviewers .reviews .ratinting_container{
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 16px;
+        }
+
+        .reviewers .reviews .ratinting_container img{
+            width: 25%;
+        }
+
+        .reviewers .reviews .ratinting_container ul{
+            width: 100%;
+            display: flex;
+            gap: 5px;
+        }
+
+        .reviewers .reviews .ratinting_container ul li{
+            cursor: pointer;
+            list-style: none;
+            display: grid;
+            place-content: center;
+        }
+
+        .reviewers .reviews .ratinting_container ul li img{
+            width: 24px;
+        }
+
+        .reviewers .reviewer{
+            font-weight: 600;
+        }
+        .reviewers .reviewer,
+        .reviewers .reviewer{
+            font-size: 0.825rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="testimonial">
+        <div class="review_content container">
+            <div class="star_icon_container">
+                <!-- ⭐️ -->
+            </div>
+            <h2 class="main_title">Reviewers</h2>
+            <div class="about_reviewers">Reviewers is where people can access guidelines, checklists, and other tools to
+                assist them in reviewing papers or
+                manuscripts. It provides a structured approach to ensure that the review process is thorough, efficient,
+                and consistent.</div>
+            <div class="checklist_container">
+                <div class="checklist">
+                    <img src="assets/challenge2/Done_ring_round_fill.svg" alt="Done_ring_round_fill">
+                    <p>Checklist to Review an Academic Paper</p>
+                </div>
+                <div class="checklist">
+                    <img src="assets/challenge2/Done_ring_round_fill.svg" alt="Done_ring_round_fill">
+                    <p>Peer Review Checklist</p>
+                </div>
+                <div class="checklist">
+                    <img src="assets/challenge2/Done_ring_round_fill.svg" alt="Done_ring_round_fill">
+                    <p>Checklist for Editors, Reviewers, and Authors of SPIE Journals</p>
+                </div>
+            </div>
+        </div>
+        <div class="reviewers container">
+            <div class="reviews">
+                <div class="ratinting_container">
+                    <img
+                        src="assets/challenge2/google-testimonial.png"
+                        alt="google-testimonial"
+                    >
+                    <ul>
+                        <li class="rate">
+                            <img
+                                src="assets/challenge2/Star_fill.svg"
+                                alt="Star_fill"
+                            >
+                        </li>
+                        <li class="rate">
+                            <img
+                                src="assets/challenge2/Star_fill.svg"
+                                alt="Star_fill"
+                            >
+                        </li>
+                        <li class="rate">
+                            <img
+                                src="assets/challenge2/Star_fill.svg"
+                                alt="Star_fill"
+                            >
+                        </li>
+                        <li class="rate">
+                            <img
+                                src="assets/challenge2/Star_fill.svg"
+                                alt="Star_fill"
+                            >
+                        </li>
+                        <li class="rate">
+                            <img
+                                src="assets/challenge2/Star_fill_gray.svg"
+                                alt="Star_fill_gray"
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <div class="reviewer">Samantha Lee</div>
+                <div class="review">The checklist ensures that the review process is thorough</div>
+            </div>
+            <div class="reviews">
+                <div class="ratinting_container">
+                    <img
+                        src="assets/challenge2/meta-testimonial.png"
+                        alt="meta-testimonial"
+                    >
+                    <ul>
+                        <li class="rate">
+                            <img
+                                src="assets/challenge2/Star_fill.svg"
+                                alt="Star_fill"
+                            >
+                        </li>
+                        <li class="rate">
+                            <img
+                                src="assets/challenge2/Star_fill.svg"
+                                alt="Star_fill"
+                            >
+                        </li>
+                        <li class="rate">
+                            <img
+                                src="assets/challenge2/Star_fill.svg"
+                                alt="Star_fill"
+                            >
+                        </li>
+                        <li class="rate">
+                            <img
+                                src="assets/challenge2/Star_fill.svg"
+                                alt="Star_fill"
+                            >
+                        </li>
+                        <li class="rate">
+                            <img
+                                src="assets/challenge2/Star_fill.svg"
+                                alt="Star_fill"
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <div class="reviewer">Rachel Patel</div>
+                <div class="review">I highly recommend the Writecream Business Description</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
